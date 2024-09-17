@@ -1,0 +1,102 @@
+Resumen del Analizador Sintáctico
+================================
+
+Reglas Gramaticales:
+--------------------
+Rule 0     S' -> programa
+Explicación: Regla inicial: Un programa completo.
+
+Rule 1     programa -> declaraciones
+Explicación: Un programa consiste en una serie de declaraciones.
+
+Rule 2     declaraciones -> declaracion
+Explicación: Las declaraciones pueden ser una sola declaración.
+
+Rule 3     declaraciones -> declaraciones declaracion
+Explicación: Las declaraciones pueden ser una sola declaración.
+
+Rule 4     declaracion -> asignacion
+Explicación: Una declaración puede ser una asignación de variable.
+
+Rule 5     declaracion -> impresion
+Explicación: Una declaración puede ser una instrucción de impresión.
+
+Rule 6     declaracion -> condicional
+Explicación: Una declaración puede ser una estructura condicional (if-else).
+
+Rule 7     declaracion -> ciclo_while
+Explicación: Una declaración puede ser un bucle while.
+
+Rule 8     asignacion -> VARIABLE ID IGUAL expresion
+Explicación: Una asignación consiste en la palabra clave 'nauth', un identificador, el signo igual y una expresión.
+
+Rule 9     impresion -> IMPRIMIR PARENTESIS_IZQ expresion PARENTESIS_DER
+Explicación: Una impresión consiste en la palabra clave 'pedo' seguida de una expresión entre paréntesis.
+
+Rule 10    condicional -> SI PARENTESIS_IZQ expresion PARENTESIS_DER LLAVE_IZQ declaraciones LLAVE_DER
+Explicación: Un condicional 'if' con su condición y bloque de código.
+
+Rule 11    condicional -> SI PARENTESIS_IZQ expresion PARENTESIS_DER LLAVE_IZQ declaraciones LLAVE_DER SINO LLAVE_IZQ declaraciones LLAVE_DER
+Explicación: Un condicional 'if' con su condición y bloque de código.
+
+Rule 12    ciclo_while -> MIENTRAS PARENTESIS_IZQ expresion PARENTESIS_DER LLAVE_IZQ declaraciones LLAVE_DER
+Explicación: Un bucle 'while' con su condición y bloque de código.
+
+Rule 13    expresion -> ID
+Explicación: Una expresión puede ser un identificador de variable.
+
+Rule 14    expresion -> NUMERO
+Explicación: Una expresión puede ser un número.
+
+Rule 15    expresion -> CADENA
+Explicación: Una expresión puede ser una cadena de texto.
+
+Rule 16    expresion -> expresion SUMA expresion
+Explicación: Una expresión puede ser la suma de dos expresiones.
+
+Rule 17    expresion -> expresion RESTA expresion
+Explicación: Una expresión puede ser la resta de dos expresiones.
+
+Rule 18    expresion -> expresion MULTIPLICACION expresion
+Explicación: Una expresión puede ser la multiplicación de dos expresiones.
+
+Rule 19    expresion -> expresion DIVISION expresion
+Explicación: Una expresión puede ser la división de dos expresiones.
+
+Rule 20    expresion -> expresion MENOR expresion
+Explicación: Una expresión puede ser una comparación 'menor que' entre dos expresiones.
+
+Rule 21    expresion -> expresion MAYOR expresion
+Explicación: Una expresión puede ser una comparación 'mayor que' entre dos expresiones.
+
+Símbolos Terminales:
+--------------------
+CADENA, DIVISION, ID, IGUAL, IMPRIMIR, LLAVE_DER, LLAVE_IZQ, MAYOR, MENOR, MIENTRAS, MULTIPLICACION, NUMERO, PARENTESIS_DER, PARENTESIS_IZQ, RESTA, SI, SINO, SUMA, VARIABLE, error
+
+Símbolos No Terminales:
+------------------------
+!, $end, (0), (1), (10), (11), (12), (13), (14), (15), (16), (17), (18), (19), (2), (20), (21), (3), (4), (5), (6), (7), (8), (9), CADENA, DIVISION, ID, IGUAL, IMPRIMIR, LLAVE_DER, LLAVE_IZQ, MAYOR, MENOR, MIENTRAS, MULTIPLICACION, NUMERO, PARENTESIS_DER, PARENTESIS_IZQ, Parsing, RESTA, SI, SINO, SUMA, VARIABLE, WARNING:, asignacion, ciclo_while, condicional, declaracion, declaraciones, expresion, impresion, programa
+
+Nota: Este resumen no incluye todos los detalles del archivo parser.out original.
+Para ver todos los detalles, por favor consulte el archivo parser.out completo.
+
+Comparativa de Léxicos: Tolkin vs Python
+======================================
+
+| Tolkin (Élfico/Mordor) | Python    | Descripción                |
+|------------------------|-----------|----------------------------|
+| nauth                  | =         | Asignación de variable     |
+| pedo                   | print     | Imprimir en consola        |
+| thand                  | if        | Condicional if             |
+| ú                      | else      | Condicional else           |
+| am                     | while     | Bucle while                |
+| +                      | +         | Suma                       |
+| -                      | -         | Resta                      |
+| *                      | *         | Multiplicación             |
+| /                      | /         | División                   |
+| <                      | <         | Menor que                  |
+| >                      | >         | Mayor que                  |
+| ==                     | ==        | Igual a                    |
+| !=                     | !=        | Diferente de               |
+| ( )                    | ( )       | Paréntesis                 |
+| { }                    | :         | Inicio/fin de bloque       |
