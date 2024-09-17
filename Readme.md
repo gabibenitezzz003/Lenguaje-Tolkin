@@ -28,7 +28,7 @@ El Proyecto Tolkin es un compilador que traduce un lenguaje de programación ins
 
 ## Cómo usar
 1. Asegúrate de tener Python y PLY (Python Lex-Yacc) instalados.
-2. Clona el repositorio: `git clone https://github.com/tu-usuario/proyecto-tolkin.git`
+2. Clona el repositorio: `git clone https://github.com/gabibenitezzz003/Lenguaje-Tolkin.git`
 3. Navega al directorio del proyecto: `cd proyecto-tolkin`
 4. Ejecuta el compilador: `python main.py`
 
